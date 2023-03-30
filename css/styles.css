@@ -1,0 +1,248 @@
+:root {
+    --dark: #2D2439;
+    --grey: #403251;
+    --teal: #326E90;
+    --mint: #ADECF2;
+    --pink: #E05CB3;
+    --impt: 'Macondo', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0px;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Laila', sans-serif;
+    color: var(--mint);
+    background-color: var(--dark);
+    justify-content: space-between;
+    background-position: bottom;
+    overflow: visible;
+}
+
+a {
+    color: var(--mint);
+    text-decoration: none;
+}
+
+#home-bg {
+    background-image: url("../img/Homepage.png");
+}
+
+#menu-bg {
+    background-image: url("../img/Menu.png");
+}
+
+#header, #footer {
+    height: 10vh;
+    max-height: 150px;
+    width: 100%;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+h2, #focus-button {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.logo, h1 {
+    font-family: var(--impt);
+    margin: 10px;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.row-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#top-links {
+    width: 40%;
+}
+
+.top-button {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--teal);
+    text-align: center;
+}
+
+.top-button:hover, .top-button:focus, #focus-button:hover, #focus-button:focus {
+    color: var(--dark);
+    background-color: var(--mint);
+    letter-spacing: 2px;
+}
+
+#index-main {
+    width: 60%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    background-color:rgba(45, 36, 57, 0.8);
+    text-align: center;
+}
+
+#focus-button {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--pink);
+    color: var(--dark);
+    width: 40%;
+    text-align: center;
+}
+
+.social-link {
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.social-link > img {
+    width: 50%;
+}
+
+.social-link:hover, .social-link:focus {
+    background-color: var(--pink);
+}
+
+#footer {
+    justify-content: flex-end;
+    max-height: 50px;
+}
+
+#footer > p {
+    margin: 10px;
+}
+
+#socials {
+    width: 60%;
+    min-width: 350px;
+    justify-content: space-between;
+}
+
+#menu-row {
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: 15px;
+    padding: 0px;
+    border: 5px solid var(--pink);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.card-hover {
+    border-radius: 20px;
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    left: -5px;
+    background-color: var(--pink);
+    opacity: 0;
+    border: 5px solid var(--pink);
+}
+
+.card-banner {
+    background-color: var(--dark);
+    padding: 5px 0px;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    font-family: 'Laila', sans-serif;
+    color: var(--mint);
+    font-size: 24px;
+}
+
+.card-hover:hover, .card-banner:hover ~ .card-hover, .card:hover .card-hover {
+    opacity: 0.7;
+    border-color: var(--mint);
+}
+
+.card:hover {
+    border-color: var(--mint);
+}
+
+.card:hover > .card-banner, .card-banner:hover {
+    background-color: var(--mint);
+    color: var(--dark);
+    letter-spacing: 2px;
+}
+
+#cold {
+    background-image: url("../img/cold.png");
+}
+
+#hot {
+    background-image: url("../img/hot.png");
+}
+
+#catering {
+    background-image: url("../img/catering.png");
+}
+
+#appetizers {
+    background-image: url("../img/appetizers.png");
+}
+
+#entrees {
+    background-image: url("../img/entrees.png");
+}
+
+#desserts {
+    background-image: url("../img/desserts.png");
+}
+
+@media screen and (max-width: 800px) {
+
+    #header {
+        flex-direction: column;
+        height: 250px;
+        justify-content: space-around;
+    }
+
+    #focus-button {
+        font-size: 18px;
+    }
+
+    #top-links {
+        width: 90%;
+    }
+
+}
